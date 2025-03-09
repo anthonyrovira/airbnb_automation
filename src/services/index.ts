@@ -6,7 +6,7 @@ export async function fetchReservationsBy40(
   totalCount: number = 0
 ): Promise<ReservationData | undefined> {
   const envVariableIndex = `AIRBNB_CLIENT_REQUEST_ID_${pageIndex}`;
-  const clientRequestId: string = process.env[envVariableIndex]!;
+  const clientRequestId = process.env[envVariableIndex] as string;
 
   const response: Response = await fetch(
     `https://www.airbnb.fr/api/v2/reservations?locale=fr&currency=EUR&_format=for_remy&_limit=40&_offset=${

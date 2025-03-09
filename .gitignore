@@ -3,3 +3,4 @@ output/
 .vscode/
 *.js
 .env
+*.xlsx
